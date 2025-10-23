@@ -1,0 +1,21 @@
+https://code-with-me.global.jetbrains.com/B6lUz__q45exek0K3PBiHw
+@startuml
+
+class Usuario{
+    nombre
+    correo
+}
+
+class Grupo{
+    idGrupo
+}
+
+class CuentaBancaria{
+    iban
+    saldo
+    usuarioTitular
+}
+
+Usuario "1" -- "*" Grupo : pertenece a >
+
+@enduml
