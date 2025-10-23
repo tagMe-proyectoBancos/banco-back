@@ -1,21 +1,20 @@
-https://code-with-me.global.jetbrains.com/B6lUz__q45exek0K3PBiHw
 @startuml
 
-class Usuario{
-    nombre
-    correo
-}
-
-class Grupo{
-    idGrupo
-}
-
 class CuentaBancaria{
-    iban
-    saldo
-    usuarioTitular
+    -iban
+    -saldo
+    -usuarioId
+    +get*
+    +set*
 }
 
-Usuario "1" -- "*" Grupo : pertenece a >
+class Usuario{
+    -id
+    -nombre
+    -direccion
+    -telefono
+}
+
+Usuario "1" -- "0.*" CuentaBancaria : tiene
 
 @enduml
